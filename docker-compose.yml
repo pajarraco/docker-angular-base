@@ -2,7 +2,7 @@ version: '3'
 services:
   docker-angular-base:
     build: .
-    image: pajarraco/docker-angular-base
+    image: pajarraco/docker-angular-base:node8
     volumes:
       - ./src:/app/src
     ports:
