@@ -1,0 +1,9 @@
+version: '3'
+services:
+  docker-angular-base:
+    build: .
+    image: pajarraco/docker-angular-base
+    volumes:
+      - ./src:/app/src
+    ports:
+    - "4200:4200"
