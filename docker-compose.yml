@@ -5,5 +5,6 @@ services:
     image: pajarraco/docker-angular-base:node8
     volumes:
       - ./src:/app/src
+      - ./dist:/app/dist
     ports:
-    - "4200:4200"
+      - "4200:4200"
