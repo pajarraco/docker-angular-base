@@ -1,6 +1,7 @@
 FROM node:8
 
 RUN mkdir -p /app
+RUN mkdir -p /app/build
 WORKDIR /app
 
 COPY package.json /app/
@@ -11,4 +12,4 @@ COPY . /app
 
 EXPOSE 4200/tcp
 
-CMD [ "npm", "start", "--", "--host", "0.0.0.0", "--poll", "500" ]
+CMD [ "npm", "run", "build" ]
