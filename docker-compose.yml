@@ -1,6 +1,6 @@
-version: '3'
+version: "3"
 services:
-  dev:
+  deploy:
     container_name: docker-angular-base
     build: .
     image: pajarraco/docker-angular-base
@@ -13,9 +13,13 @@ services:
       - "9229"
     command: node --inspect=0.0.0.0:9229 index.js
 
-  deploy:
-    build:
+  dev:
+    build: 
       context: .
-      dockerfile: Dockerfile-build
+      dockerfile: Dockerfile-dev
     volumes:
-      - ./dist:/app/build
+      - ./src:/app/src
+    environment:
+      NODE_ENV: development
+    ports:
+      - "4200:4200"
