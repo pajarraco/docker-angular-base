@@ -3,7 +3,7 @@ services:
   dev:
     container_name: docker-angular-base
     build: .
-    image: pajarraco/docker-angular-base:node8
+    image: pajarraco/docker-angular-base
     volumes:
       - ./src:/app/src
     ports:
