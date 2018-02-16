@@ -1,11 +1,16 @@
-# docker-angular-base
+# Docker Angular Base
 Base files for running angular on docker container
 
+# Development environment
 
-# Development
-
-run docker-compose up dev
+Run using Docker Compose:
+```console 
+$ docker-compose up dev
+```
 
 # Build
 
-run docker-compose up deploy
+Run using Docker Compose:
+```console 
+$ docker-compose up deploy
+```
